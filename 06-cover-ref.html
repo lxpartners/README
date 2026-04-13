@@ -1,0 +1,28 @@
+<div class="wrap">
+
+<div style="margin:44px 0 32px">
+  <div class="sec-title">Know Your Customer</div>
+  <div class="sec-sub" data-i18n="cover_sub">AMI n.º 20468 · NIPC 516351974 · Lei n.º 83/2017 · Confidencial<br>Preencha todas as secções aplicáveis. <span style="color:var(--err)">*</span> Campo obrigatório.</div>
+  <div class="type-toggle" id="type-toggle">
+    <button class="type-btn active" id="btn-singular" onclick="setType('singular')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span data-i18n="type_singular">Pessoa Singular</span>
+    </button>
+    <button class="type-btn" id="btn-coletiva" onclick="setType('coletiva')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      <span data-i18n="type_coletiva">Pessoa Coletiva</span>
+    </button>
+  </div>
+  <!-- INTERNO: Referência -->
+  <div class="internal-section">
+    <div class="card">
+      <div class="clbl" data-i18n="ref_clbl">Referência do processo</div>
+      <div class="g2">
+        <div class="f"><label class="req" data-i18n="ref_owner">Proprietário</label><input type="text" name="prop_nome" data-req-pt="Proprietário" data-req-en="Owner" placeholder="Nome completo ou empresa"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f"><label data-i18n="ref_refint">Referência interna</label><input type="text" name="ref_interna" id="ref_interna" readonly style="cursor:default;opacity:.8"><span style="font-size:9px;color:var(--ok)" data-i18n="ref_auto">Gerada automaticamente</span></div>
+        <div class="f"><label class="req" data-i18n="ref_id">ID Imóvel</label><input type="text" name="id_imovel" data-req-pt="ID Imóvel" data-req-en="Property ID"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f"><label class="req" data-i18n="ref_nipc">NIPC</label><input type="text" name="prop_nipc" data-req-pt="NIPC" data-req-en="NIPC" placeholder="000 000 000"><span class="f-err">Campo obrigatório</span></div>
+      </div>
+    </div>
+  </div>
+</div>

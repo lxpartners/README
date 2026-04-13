@@ -1,0 +1,123 @@
+<!-- C — SINGULAR -->
+<div id="section-singular">
+  <div class="divider"></div>
+  <div class="sec-title" data-i18n="c_title">Proponente — Pessoa Singular</div>
+  <div class="sec-sub" data-i18n="c_sub">Use "N/A" onde não aplicável.</div>
+  <div class="card">
+    <div class="clbl" data-i18n="c_clbl">Dados Pessoais — Proponente 1</div>
+    <div class="g3">
+      <div class="f s3"><label class="req" data-i18n="c_name">Nome Completo</label><input type="text" name="c1_nome" data-req-pt="Nome do Proponente" data-req-en="Proposer Name" placeholder="Conforme documento de identificação"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f"><label class="req" data-i18n="c_dob">Data de Nascimento</label><input type="date" name="c1_nasc" data-req-pt="Data de Nascimento" data-req-en="Date of Birth"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f"><label class="req" data-i18n="c_birth_place">Naturalidade (freguesia e concelho)</label><input type="text" name="c1_nat" data-req-pt="Naturalidade" data-req-en="Place of Birth"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f"><label class="req" data-i18n="c_nationality">Nacionalidade</label><input type="text" name="c1_nac" data-req-pt="Nacionalidade" data-req-en="Nationality"><span class="f-err">Campo obrigatório</span></div>
+    </div>
+  </div>
+  <div class="g2" style="gap:12px;margin-bottom:12px">
+    <div class="card" style="margin:0">
+      <div class="clbl" data-i18n="c_doc_clbl">Documento de Identificação</div>
+      <span class="flbl" data-i18n="c_doc_type">Tipo</span>
+      <div class="opts-col" id="doc1-opts" style="margin-bottom:14px">
+        <div class="opt" onclick="toggleRad(this,'doc1-opts')"><div class="odot"></div><span data-i18n="doc_cc">BI / Cartão de Cidadão</span></div>
+        <div class="opt" onclick="toggleRad(this,'doc1-opts')"><div class="odot"></div><span data-i18n="doc_passport">Passaporte</span></div>
+        <div class="opt" onclick="toggleRad(this,'doc1-opts')"><div class="odot"></div><span data-i18n="doc_res">Título de Residência</span></div>
+        <div class="opt" onclick="toggleRad(this,'doc1-opts')"><div class="odot"></div><span data-i18n="doc_other">Outro</span></div>
+      </div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_docnum">N.º Documento</label><input type="text" name="c1_docnum" data-req-pt="N.º Documento" data-req-en="Document No."><span class="f-err">Campo obrigatório</span></div>
+      <div class="f" style="margin-bottom:10px"><label data-i18n="c_issue_date">Data de Emissão</label><input type="date" name="c1_emissao"></div>
+      <div class="f" style="margin-bottom:10px">
+        <label class="req" data-i18n="c_issuer">Entidade Emitente</label>
+        <select name="c1_entidade" data-req-pt="Entidade Emitente" data-req-en="Issuing Authority" onchange="toggleIssuerOther(this,'c1_entidade_outro')">
+          <option value="">-- Selecionar --</option><option value="IRN">IRN</option><option value="AIMA">AIMA</option><option value="outro">Outra</option>
+        </select>
+        <span class="f-err">Campo obrigatório</span>
+        <div class="outro" id="c1_entidade_outro"><input type="text" name="c1_entidade_text" placeholder="Especifique..."></div>
+      </div>
+      <div class="f"><label class="req" data-i18n="c_expiry">Válido até</label><input type="date" name="c1_validade" data-req-pt="Validade do Documento" data-req-en="Document Expiry"><span class="f-err">Campo obrigatório</span></div>
+    </div>
+    <div class="card" style="margin:0">
+      <div class="clbl" data-i18n="c_fiscal_clbl">Fiscal &amp; Residência</div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_nif">NIF Nacional</label><input type="text" name="c1_nif" data-req-pt="NIF" data-req-en="Tax ID" placeholder="000 000 000"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f" style="margin-bottom:10px"><label data-i18n="c_nif_foreign">NIF Estrangeiro / País</label><input type="text" name="c1_nif_est"></div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_residence">Residência Permanente</label><input type="text" name="c1_res1" data-req-pt="Residência Permanente" data-req-en="Permanent Residence" placeholder="Morada"><span class="f-err">Campo obrigatório</span><input class="xi" name="c1_res1b" placeholder="País"></div>
+      <div class="f"><label data-i18n="c_fiscal_res">Residência Fiscal (se diferente)</label><input type="text" name="c1_resf"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="clbl" data-i18n="c_prof_clbl">Dados Profissionais &amp; Contacto</div>
+    <div class="g3">
+      <div class="f"><label class="req" data-i18n="c_profession">Profissão</label><input type="text" name="c1_prof" data-req-pt="Profissão" data-req-en="Profession"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f"><label data-i18n="c_employer">Entidade Patronal</label><input type="text" name="c1_patr"></div>
+      <div class="f">
+        <span class="flbl" data-i18n="c_civil">Estado Civil</span>
+        <div class="opts-col" id="civil-opts">
+          <div class="opt" onclick="toggleRad(this,'civil-opts')"><div class="odot"></div><span data-i18n="civil_married">Casado/a</span></div>
+          <div class="opt" onclick="toggleRad(this,'civil-opts')"><div class="odot"></div><span data-i18n="civil_single">Solteiro/a</span></div>
+          <div class="opt" onclick="toggleRad(this,'civil-opts')"><div class="odot"></div><span data-i18n="civil_div">Divorciado/a</span></div>
+          <div class="opt" onclick="toggleRad(this,'civil-opts')"><div class="odot"></div><span data-i18n="civil_widow">Viúvo/a</span></div>
+        </div>
+      </div>
+      <div class="f s2">
+        <span class="flbl" data-i18n="c_regime">Regime de Casamento</span>
+        <div class="opts" id="reg-opts">
+          <div class="opt" onclick="toggleRad(this,'reg-opts')"><div class="odot"></div><span data-i18n="reg_joint">Comunhão geral de bens</span></div>
+          <div class="opt" onclick="toggleRad(this,'reg-opts')"><div class="odot"></div><span data-i18n="reg_acq">Comunhão de adquiridos</span></div>
+          <div class="opt" onclick="toggleRad(this,'reg-opts')"><div class="odot"></div><span data-i18n="reg_sep">Separação total de bens</span></div>
+        </div>
+      </div>
+      <div class="f"><label class="req" data-i18n="c_phone">Telefone</label><input type="tel" name="c1_tel" data-req-pt="Telefone" data-req-en="Phone" placeholder="+351 000 000 000"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f s2"><label class="req" data-i18n="c_email">Email</label><input type="email" name="c1_email" data-req-pt="Email" data-req-en="Email"><span class="f-err">Campo obrigatório</span></div>
+    </div>
+  </div>
+  <div class="yn">
+    <div class="yn-row">
+      <span class="yn-q" data-i18n="conj_q">Existe cônjuge?</span>
+      <div class="yn-btns">
+        <button class="yn-btn yes" onclick="ynToggle(this,'conj_det','yes')" data-i18n="yn_yes">Sim</button>
+        <button class="yn-btn no" onclick="ynToggle(this,'conj_det','no')" data-i18n="yn_no">Não</button>
+      </div>
+    </div>
+  </div>
+  <div id="conj_det" class="coll">
+    <div class="card">
+      <div class="clbl" data-i18n="conj_clbl">Dados do Cônjuge</div>
+      <div class="g3">
+        <div class="f s2"><label class="req" data-i18n="c_name">Nome Completo</label><input type="text" name="conj_nome" data-req-pt="Nome do Cônjuge" data-req-en="Spouse Name"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f"><span class="flbl" data-i18n="conj_also_prop">É também Proponente?</span><div class="opts" id="conj-prop-opts"><div class="opt" onclick="toggleRad(this,'conj-prop-opts')"><div class="odot"></div><span data-i18n="yn_yes">Sim</span></div><div class="opt" onclick="toggleRad(this,'conj-prop-opts')"><div class="odot"></div><span data-i18n="yn_no">Não</span></div></div></div>
+        <div class="f"><label class="req" data-i18n="c_dob">Data de Nascimento</label><input type="date" name="conj_nasc" data-req-pt="Nasc. Cônjuge" data-req-en="Spouse DOB"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f"><label class="req" data-i18n="c_birth_place">Naturalidade</label><input type="text" name="conj_nat" data-req-pt="Naturalidade Cônjuge" data-req-en="Spouse Birth Place"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f"><label class="req" data-i18n="c_nationality">Nacionalidade</label><input type="text" name="conj_nac" data-req-pt="Nacionalidade Cônjuge" data-req-en="Spouse Nationality"><span class="f-err">Campo obrigatório</span></div>
+      </div>
+    </div>
+    <div class="g2" style="gap:12px">
+      <div class="card" style="margin:0">
+        <div class="clbl" data-i18n="c_doc_clbl">Documento de Identificação</div>
+        <div class="opts-col" id="conj-doc-opts" style="margin-bottom:14px">
+          <div class="opt" onclick="toggleRad(this,'conj-doc-opts')"><div class="odot"></div><span data-i18n="doc_cc">BI / Cartão de Cidadão</span></div>
+          <div class="opt" onclick="toggleRad(this,'conj-doc-opts')"><div class="odot"></div><span data-i18n="doc_passport">Passaporte</span></div>
+          <div class="opt" onclick="toggleRad(this,'conj-doc-opts')"><div class="odot"></div><span data-i18n="doc_res">Título de Residência</span></div>
+          <div class="opt" onclick="toggleRad(this,'conj-doc-opts')"><div class="odot"></div><span data-i18n="doc_other">Outro</span></div>
+        </div>
+        <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_docnum">N.º Documento</label><input type="text" name="conj_docnum" data-req-pt="N.º Doc. Cônjuge" data-req-en="Spouse Doc No."><span class="f-err">Campo obrigatório</span></div>
+        <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_issue_date">Data de Emissão</label><input type="date" name="conj_emissao" data-req-pt="Emissão Cônjuge" data-req-en="Spouse Issue Date"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f" style="margin-bottom:10px">
+          <label class="req" data-i18n="c_issuer">Entidade Emitente</label>
+          <select name="conj_entidade" data-req-pt="Entidade Emitente Cônjuge" data-req-en="Spouse Issuing Auth." onchange="toggleIssuerOther(this,'conj_entidade_outro')">
+            <option value="">-- Selecionar --</option><option value="IRN">IRN</option><option value="AIMA">AIMA</option><option value="outro">Outra</option>
+          </select>
+          <span class="f-err">Campo obrigatório</span>
+          <div class="outro" id="conj_entidade_outro"><input type="text" name="conj_entidade_text" placeholder="Especifique..."></div>
+        </div>
+        <div class="f"><label class="req" data-i18n="c_expiry">Válido até</label><input type="date" name="conj_validade" data-req-pt="Validade Cônjuge" data-req-en="Spouse Expiry"><span class="f-err">Campo obrigatório</span></div>
+      </div>
+      <div class="card" style="margin:0">
+        <div class="clbl" data-i18n="c_fiscal_clbl">Fiscal, Residência &amp; Contacto</div>
+        <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_nif">NIF Nacional</label><input type="text" name="conj_nif" data-req-pt="NIF Cônjuge" data-req-en="Spouse NIF"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f" style="margin-bottom:10px"><label data-i18n="c_nif_foreign">NIF Estrangeiro / País</label><input type="text" name="conj_nif_est"></div>
+        <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_residence">Residência Permanente</label><input type="text" name="conj_res" data-req-pt="Residência Cônjuge" data-req-en="Spouse Residence"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_profession">Profissão</label><input type="text" name="conj_prof" data-req-pt="Profissão Cônjuge" data-req-en="Spouse Profession"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_phone">Telefone</label><input type="tel" name="conj_tel" data-req-pt="Tel. Cônjuge" data-req-en="Spouse Phone"><span class="f-err">Campo obrigatório</span></div>
+        <div class="f"><label class="req" data-i18n="c_email">Email</label><input type="email" name="conj_email" data-req-pt="Email Cônjuge" data-req-en="Spouse Email"><span class="f-err">Campo obrigatório</span></div>
+      </div>
+    </div>
+  </div>
+</div>

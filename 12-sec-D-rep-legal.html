@@ -1,0 +1,41 @@
+<!-- D — REP. LEGAL -->
+<div class="divider"></div>
+<div class="sec-title" data-i18n="d_title">Representante Legal</div>
+<div class="sec-sub" data-i18n="d_sub">Preencha apenas se existir representante legal.</div>
+<div class="yn">
+  <div class="yn-row">
+    <span class="yn-q" data-i18n="d_q">Existe Representante Legal?</span>
+    <div class="yn-btns">
+      <button class="yn-btn yes" onclick="ynToggle(this,'rep_det','yes')" data-i18n="yn_yes">Sim</button>
+      <button class="yn-btn no" onclick="ynToggle(this,'rep_det','no')" data-i18n="yn_no">Não</button>
+    </div>
+  </div>
+</div>
+<div id="rep_det" class="coll">
+  <div class="g2" style="gap:12px">
+    <div class="card" style="margin:0">
+      <div class="clbl" data-i18n="d_personal_clbl">Dados Pessoais &amp; Identificação</div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_name">Nome Completo</label><input type="text" name="d_nome" data-req-pt="Nome Rep. Legal" data-req-en="Legal Rep. Name"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_dob">Data de Nascimento</label><input type="date" name="d_nasc" data-req-pt="Nasc. Rep. Legal" data-req-en="Legal Rep. DOB"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_nationality">Nacionalidade</label><input type="text" name="d_nac" data-req-pt="Nacionalidade Rep. Legal" data-req-en="Legal Rep. Nationality"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_docnum">N.º Documento</label><input type="text" name="d_docnum" data-req-pt="N.º Doc. Rep. Legal" data-req-en="Legal Rep. Doc No."><span class="f-err">Campo obrigatório</span></div>
+      <div class="f" style="margin-bottom:10px">
+        <label class="req" data-i18n="c_issuer">Entidade Emitente</label>
+        <select name="d_entidade" data-req-pt="Entidade Emitente Rep. Legal" data-req-en="Legal Rep. Issuing Auth." onchange="toggleIssuerOther(this,'d_entidade_outro')">
+          <option value="">-- Selecionar --</option><option value="IRN">IRN</option><option value="AIMA">AIMA</option><option value="outro">Outra</option>
+        </select>
+        <span class="f-err">Campo obrigatório</span>
+        <div class="outro" id="d_entidade_outro"><input type="text" name="d_entidade_text" placeholder="Especifique..."></div>
+      </div>
+      <div class="f"><label class="req" data-i18n="c_expiry">Válido até</label><input type="date" name="d_validade" data-req-pt="Validade Rep. Legal" data-req-en="Legal Rep. Expiry"><span class="f-err">Campo obrigatório</span></div>
+    </div>
+    <div class="card" style="margin:0">
+      <div class="clbl" data-i18n="c_fiscal_clbl">Fiscal, Residência &amp; Contacto</div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_nif">NIF Nacional</label><input type="text" name="d_nif" data-req-pt="NIF Rep. Legal" data-req-en="Legal Rep. NIF"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f" style="margin-bottom:10px"><label data-i18n="c_nif_foreign">NIF Estrangeiro / País</label><input type="text" name="d_nif_est"></div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_residence">Residência Permanente</label><input type="text" name="d_res1" data-req-pt="Residência Rep. Legal" data-req-en="Legal Rep. Residence"><span class="f-err">Campo obrigatório</span><input class="xi" name="d_res2" placeholder="País"></div>
+      <div class="f" style="margin-bottom:10px"><label class="req" data-i18n="c_phone">Telefone</label><input type="tel" name="d_tel" data-req-pt="Tel. Rep. Legal" data-req-en="Legal Rep. Phone"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f"><label class="req" data-i18n="c_email">Email</label><input type="email" name="d_email" data-req-pt="Email Rep. Legal" data-req-en="Legal Rep. Email"><span class="f-err">Campo obrigatório</span></div>
+    </div>
+  </div>
+</div>

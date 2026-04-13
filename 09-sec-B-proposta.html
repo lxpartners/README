@@ -1,0 +1,59 @@
+<!-- B — PROPOSTA -->
+<div class="divider"></div>
+<div class="sec-title" data-i18n="b_title">Proposta</div>
+<div class="sec-sub" data-i18n="b_sub">Condições e estrutura financeira da proposta de aquisição.</div>
+<div class="card">
+  <div class="clbl" data-i18n="b_clbl">Dados da proposta</div>
+  <div class="g2">
+    <div class="f s2"><label class="req" data-i18n="b_purpose">Propósito do Negócio</label><input type="text" name="b_prop" data-req-pt="Propósito do Negócio" data-req-en="Business Purpose"><span class="f-err">Campo obrigatório</span></div>
+    <div class="f s2">
+      <span class="flbl" data-i18n="b_dest">Destino do Bem <span style="color:var(--err)">*</span></span>
+      <div class="opts">
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_dest_hab">Habitação</span></div>
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_dest_arr">Arrendamento</span></div>
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_dest_rev">Revenda</span></div>
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_dest_inv">Investimento</span></div>
+        <div class="opt sq" onclick="toggleChkOutro(this,'outro-dest')"><div class="odot"></div><span data-i18n="b_dest_other">Outro</span></div>
+      </div>
+      <div class="outro" id="outro-dest"><input type="text" name="b_dest_outro" placeholder="Especifique..."></div>
+    </div>
+    <div class="f"><label class="req" data-i18n="b_value">Valor da Proposta (€)</label><input type="text" name="b_valor" data-req-pt="Valor da Proposta" data-req-en="Offer Value" placeholder="0,00"><span class="f-err">Campo obrigatório</span></div>
+    <div class="f"><label class="req" data-i18n="b_signal">Sinal CPCV (€)</label><input type="text" name="b_sinal" data-req-pt="Sinal CPCV" data-req-en="CPCV Deposit" placeholder="0,00"><span class="f-err">Campo obrigatório</span></div>
+    <div class="f"><label data-i18n="b_deadline">Prazo para Escritura</label><input type="date" name="b_prazo"></div>
+    <div class="f">
+      <span class="flbl" data-i18n="b_funds">Fundos <span style="color:var(--err)">*</span></span>
+      <div class="opts" id="fund-opts">
+        <div class="opt" onclick="toggleRad(this,'fund-opts')"><div class="odot"></div><span data-i18n="b_funds_own">Próprios</span></div>
+        <div class="opt" onclick="toggleRad(this,'fund-opts');checkFinPct()"><div class="odot"></div><span data-i18n="b_funds_fin">Financiamento</span></div>
+        <div class="opt" onclick="toggleRad(this,'fund-opts');checkFinPct()"><div class="odot"></div><span data-i18n="b_funds_mix">Mistos</span></div>
+      </div>
+    </div>
+    <div class="f"><label class="req" data-i18n="b_fin_pct">% Financiamento</label><input type="text" name="b_fin_pct" id="b_fin_pct" data-req-pt="% Financiamento" data-req-en="% Financing" placeholder="Ex: 80%" oninput="checkFinPct()"><span class="f-err">Campo obrigatório</span></div>
+    <div class="f" id="banco-wrap"><label class="req" data-i18n="b_fin_bank">Banco Financiador</label><input type="text" name="b_fin_banco" id="b_fin_banco" data-req-pt="Banco Financiador" data-req-en="Financing Bank"><span class="f-err">Campo obrigatório</span></div>
+    <div class="f s2">
+      <span class="flbl" data-i18n="b_funds_origin">Proveniência de Fundos Próprios <span style="color:var(--err)">*</span></span>
+      <div class="opts">
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_fo_dep">Depósito bancário</span></div>
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_fo_sale">Venda de ativo</span></div>
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_fo_sav">Poupanças</span></div>
+        <div class="opt sq" onclick="toggleChkOutro(this,'outro-fundos')"><div class="odot"></div><span data-i18n="b_dest_other">Outro</span></div>
+      </div>
+      <div class="outro" id="outro-fundos"><input type="text" name="b_fundos_outro" placeholder="Especifique..."></div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="clbl" data-i18n="b_pay_clbl">Meios de Pagamento</div>
+  <div class="g2">
+    <div class="f s2">
+      <span class="flbl" data-i18n="b_pay_method">Meio de Pagamento <span style="color:var(--err)">*</span></span>
+      <div class="opts">
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_pay_cheque">Cheque bancário / visado</span></div>
+        <div class="opt sq" onclick="toggleChk(this)"><div class="odot"></div><span data-i18n="b_pay_transfer">Transferência bancária</span></div>
+      </div>
+    </div>
+    <div class="f"><label class="req" data-i18n="b_bank_name">Banco</label><input type="text" name="b_banco" data-req-pt="Banco" data-req-en="Bank" placeholder="Nome do banco"><span class="f-err">Campo obrigatório</span></div>
+    <div class="f"><label class="req" data-i18n="b_iban_cheque">IBAN</label><input type="text" name="b_cheque_iban" data-req-pt="IBAN" data-req-en="IBAN" placeholder="PT50 0000 0000 0000 0000 0000 0"><span class="f-err">Campo obrigatório</span></div>
+    <div class="f s2"><label data-i18n="b_obs">Observações</label><textarea name="b_obs" rows="2" placeholder="Notas adicionais..."></textarea></div>
+  </div>
+</div>

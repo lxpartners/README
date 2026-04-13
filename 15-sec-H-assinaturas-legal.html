@@ -1,0 +1,167 @@
+<!-- H — ASSINATURAS -->
+<div class="divider"></div>
+<div class="sec-title" data-i18n="h_title">Proteção de Dados &amp; Declarações</div>
+<div class="sec-sub" data-i18n="h_sub">Por favor, leia atentamente antes de assinar.</div>
+
+<!-- GDPR — dropdown -->
+<div class="gdpr-box">
+  <button class="gdpr-toggle" onclick="toggleGdpr()">
+    <strong data-i18n="h_gdpr_title">Proteção de Dados Pessoais</strong>
+    <svg class="gdpr-chevron" id="gdpr-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>
+  </button>
+  <div class="gdpr-body" id="gdpr-body">
+    <p style="margin-top:12px">A ALYX Properties, Lda. trata os dados pessoais deste formulário ao abrigo do RGPD (UE 2016/679), da Lei n.º 83/2017, de 18 de agosto e da sua política interna. Os dados recolhidos são estritamente os necessários ao cumprimento do dever de identificação e diligência previsto na Lei n.º 83/2017 de 18 de agosto — a recusa sobre o seu fornecimento implica a impossibilidade de celebrar o contrato ou transação.</p>
+    <p style="margin-top:8px">Conservados pelo prazo legalmente exigido.</p>
+    <p style="margin-top:8px">Direitos de acesso, retificação, atualização, apagamento, limitação e oposição deverão ser exercidos para o Departamento de Compliance, para a morada da sede da ALYX Properties, Lda. ou para o endereço de email: <strong style="color:var(--text)"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d090c190c1d1f0219080e190402032d0c010a080f1f0c0e0c1d04190c01431d19">[email&#160;protected]</a></strong></p>
+  </div>
+</div>
+
+<!-- Declarações -->
+<div class="ibox">
+  <strong data-i18n="h_decl_title">Declarações do(s) Proponente(s)</strong>
+  <div style="margin-top:8px;font-size:11px;color:var(--text2);line-height:1.8;font-weight:300">
+    Ao assinar, o(s) Proponente(s) declara(m) expressamente que:
+    <ol style="margin:8px 0 0 16px;display:flex;flex-direction:column;gap:6px">
+      <li>(i) conhece(m) e reconhece(m), na sua plenitude, as condições em que o Imóvel se encontra e que, além de o aceitar(em) no estado em que está, reconhece(m) ainda que o preço de compra e venda aqui proposto tem em conta esse mesmo estado;</li>
+      <li>(ii) aceita(m) que a não aceitação desta proposta pela ALYX Properties, Lda não gera qualquer direito a indemnização ao(s) Proponente(s) e/ou ao Mediador Imobiliário, seja a que título for, por quaisquer danos que estes venham a ter por este facto;</li>
+      <li>(iii) garante(m) que os dados incluídos neste formulário e nos documentos fornecidos para efeitos de identificação estão corretos e em vigor na data de assinatura do formulário e consente(m) no seu tratamento para a exclusiva finalidade do contrato ou transação a que se destinam;</li>
+      <li>(iv) compromete(m)-se a informar sempre que se verifiquem alterações e a fornecer elementos complementares necessários a assegurar o cumprimento dos deveres a que a ALYX Properties, Lda está legalmente vinculada no âmbito das obrigações legais de combate ao branqueamento de capitais e financiamento do terrorismo (AML/CFT).</li>
+    </ol>
+  </div>
+</div>
+
+<div class="card">
+  <div class="clbl" data-i18n="h_sign_clbl">Assinaturas</div>
+  <div class="ibox" style="margin-bottom:18px">
+    <strong data-i18n="h_how_title">Como funciona</strong>
+    <span data-i18n="h_how_text">Opção A — Exporte o formulário pré-preenchido em PDF, assine fisicamente e faça upload. Opção B — Autentique digitalmente com Chave Móvel Digital.</span>
+  </div>
+  <div style="display:flex;gap:10px;margin-bottom:20px">
+    <button class="btn-exp" style="flex:1" onclick="runExport(false)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M8 12l4 4 4-4"/><rect x="3" y="18" width="18" height="3" rx="1"/></svg>
+      <span data-i18n="h_export_btn">Exportar formulário pré-preenchido (PDF)</span>
+    </button>
+    <button class="btn-exp" style="flex:1;border-color:var(--border);color:var(--text3)" onclick="openDraftPDF()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+      <span data-i18n="h_export_skip">Exportar sem validação (rascunho)</span>
+    </button>
+  </div>
+  <div class="sgrid">
+    <div>
+      <div style="font-size:8px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:14px" data-i18n="h_p1_lbl">Proponente 1</div>
+      <div class="f" style="margin-bottom:12px"><label class="req" data-i18n="c_name">Nome</label><input type="text" id="h1_nome" name="h1_nome" data-req-pt="Assinatura — Nome Proponente 1" data-req-en="Signature — Proposer 1"><span class="f-err">Campo obrigatório</span></div>
+      <div class="f" style="margin-bottom:12px"><label data-i18n="h_place">Local</label><input type="text" name="h1_local"></div>
+      <div class="f" style="margin-bottom:12px"><label class="req" data-i18n="h_date">Data</label><input type="date" name="h1_data" data-req-pt="Data Assinatura P1" data-req-en="Signature Date P1"><span class="f-err">Campo obrigatório</span></div>
+      <button class="cmd-btn" id="cmd-btn-1" onclick="openCmd(1)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+        <span id="cmd-label-1" data-i18n="h_cmd_btn">Autenticar com Chave Móvel Digital</span>
+      </button>
+      <div class="cmd-st" id="cmd-status-1"></div>
+      <div style="margin-top:16px">
+        <div style="font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px" data-i18n="h_upload_sign">Upload de assinatura física</div>
+        <div class="upload-area" id="upload-area-1" onclick="document.getElementById('upload-1').click()">
+          <input type="file" id="upload-1" accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="handleUpload(this,1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;color:var(--text3);display:block;margin:0 auto 8px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase" data-i18n="h_upload_click">Clique para fazer upload do documento assinado</p>
+          <p style="font-size:9px;color:var(--text3);margin-top:4px">PDF, JPG ou PNG</p>
+        </div>
+        <div class="upload-name" id="upload-name-1"></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:8px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:14px" data-i18n="h_p2_lbl">Proponente 2 / Representante Legal</div>
+      <div class="f" style="margin-bottom:12px"><label data-i18n="c_name">Nome</label><input type="text" id="h2_nome" name="h2_nome"></div>
+      <div class="f" style="margin-bottom:12px"><label data-i18n="h_place">Local</label><input type="text" name="h2_local"></div>
+      <div class="f" style="margin-bottom:12px"><label data-i18n="h_date">Data</label><input type="date" name="h2_data"></div>
+      <button class="cmd-btn" id="cmd-btn-2" onclick="openCmd(2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+        <span id="cmd-label-2" data-i18n="h_cmd_btn">Autenticar com Chave Móvel Digital</span>
+      </button>
+      <div class="cmd-st" id="cmd-status-2"></div>
+      <div style="margin-top:16px">
+        <div style="font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px" data-i18n="h_upload_sign">Upload de assinatura física</div>
+        <div class="upload-area" id="upload-area-2" onclick="document.getElementById('upload-2').click()">
+          <input type="file" id="upload-2" accept=".pdf,.jpg,.jpeg,.png" style="display:none" onchange="handleUpload(this,2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;color:var(--text3);display:block;margin:0 auto 8px"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase" data-i18n="h_upload_click">Clique para fazer upload do documento assinado</p>
+          <p style="font-size:9px;color:var(--text3);margin-top:4px">PDF, JPG ou PNG</p>
+        </div>
+        <div class="upload-name" id="upload-name-2"></div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:9px;color:var(--text3);margin-top:16px" data-i18n="h_cmd_note">A autenticação CMD é efetuada no portal oficial do Estado.</p>
+</div>
+
+<!-- LEGAL -->
+<div class="divider"></div>
+<div class="sec-title" data-i18n="legal_title">Definições Legais</div>
+<div class="sec-sub" data-i18n="legal_sub">Lei n.º 83/2017, de 18 de agosto — apenas para referência.</div>
+<button class="anx-btn" onclick="toggleAnnex()">
+  <div class="anx-icon" id="anx-icon">+</div>
+  <span id="anx-txt" data-i18n="legal_btn_open">Ver notas legais</span>
+</button>
+<div class="anx-body" id="anx-body">
+
+  <p><strong>Pessoas Politicamente Expostas (PeP)</strong> — Pessoas singulares que desempenham ou desempenharam nos últimos 12 meses, em qualquer país ou jurisdição, as seguintes funções públicas de nível superior (arts. 2.º, n.º 1, al. cc), 19.º e 39º):</p>
+  <ul style="margin:8px 0 0 16px">
+    <li>Chefes de Estado, de Governo e membros do Governo (ministros, secretários e subsecretários de Estado ou equiparados);</li>
+    <li>Deputados ou outros membros de câmaras parlamentares;</li>
+    <li>Membros do TC, STJ, STA, Tribunal de Contas e membros de órgãos equivalentes de outros Estados e de organizações internacionais;</li>
+    <li>Representantes da República e membros dos órgãos de governo próprio de regiões autónomas;</li>
+    <li>Provedor de Justiça, Conselheiros de Estado, membros da CNPD, CSM, CSTAF, PGR, CSMP, CSDN, CES e ERC;</li>
+    <li>Chefes de missões diplomáticas e consulares;</li>
+    <li>Oficiais Generais das Forças Armadas e da GNR e Superintendentes-Chefes da PSP;</li>
+    <li>Presidentes e vereadores com funções executivas de câmaras municipais;</li>
+    <li>Membros de órgãos de administração e fiscalização de bancos centrais (incl. BCE);</li>
+    <li>Membros de órgãos de administração e de fiscalização de institutos públicos, fundações públicas, estabelecimentos públicos e entidades administrativas independentes;</li>
+    <li>Membros de órgãos de administração e de fiscalização de entidades pertencentes ao setor público empresarial, incluindo os setores empresarial, regional e local;</li>
+    <li>Membros dos órgãos executivos de direção de partidos políticos de âmbito nacional ou regional;</li>
+    <li>Diretores, diretores-adjuntos e membros do conselho de administração ou pessoas que exercem funções equivalentes numa organização internacional.</li>
+  </ul>
+
+  <p style="margin-top:16px"><strong>Membros próximos da família</strong> (art. 2.º, n.º 1, al. w):</p>
+  <ul style="margin:8px 0 0 16px">
+    <li>Cônjuge ou unido de facto de PeP;</li>
+    <li>Parentes e afins em 1.º grau (linha reta ou colateral) de PeP;</li>
+    <li>Unidos de facto dos parentes da PeP que não beneficiem do estatuto de afinidade;</li>
+    <li>Pessoas em posições similares noutros ordenamentos jurídicos.</li>
+  </ul>
+
+  <p style="margin-top:16px"><strong>Pessoas estreitamente associadas</strong> (art. 2.º, n.º 1, al. dd):</p>
+  <ul style="margin:8px 0 0 16px">
+    <li>Comproprietário com uma PeP de pessoa coletiva ou centro de interesses coletivos sem personalidade jurídica;</li>
+    <li>Titular de capital ou direitos de voto de uma pessoa coletiva ou de património de um centro de interesses coletivos sem personalidade jurídica cujo beneficiário efetivo seja uma PeP;</li>
+    <li>Pessoa com relações societárias, comerciais ou profissionais com uma PeP.</li>
+  </ul>
+
+  <p style="margin-top:16px"><strong>Titular de outro Cargo Político ou Público</strong> — Pessoa singular que, não sendo PeP, desempenha ou desempenhou nos últimos 12 meses em Portugal funções de (arts. 2.º, n.º 1, al. gg), 19.º e 39.º):</p>
+  <ul style="margin:8px 0 0 16px">
+    <li>Presidente da República;</li>
+    <li>Presidente da Assembleia da República;</li>
+    <li>Primeiro-Ministro;</li>
+    <li>Deputados à Assembleia da República;</li>
+    <li>Membros do Governo;</li>
+    <li>Representante da República nas Regiões Autónomas;</li>
+    <li>Membros dos órgãos de governo próprio das Regiões Autónomas;</li>
+    <li>Deputados ao Parlamento Europeu;</li>
+    <li>Membros dos órgãos executivos do poder local, com exceção dos vogais das Juntas de Freguesia com menos de 10 000 eleitores, que se encontrem em regime de não permanência;</li>
+    <li>Membros dos órgãos executivos das áreas metropolitanas e entidades intermunicipais;</li>
+    <li>Membros dos órgãos executivos dos partidos políticos aos níveis nacional e das regiões autónomas;</li>
+    <li>Candidatos a Presidente da República;</li>
+    <li>Membros do Conselho de Estado;</li>
+    <li>Presidente do Conselho Económico e Social;</li>
+    <li>Gestores públicos e membros de órgão de administração de sociedade anónima de capitais públicos, que exerçam funções executivas;</li>
+    <li>Titulares de órgão de gestão de empresa participada pelo Estado, quando designados por este;</li>
+    <li>Membros de órgãos de gestão das empresas que integram os sectores empresarial regional ou local;</li>
+    <li>Membros de órgãos diretivos dos institutos públicos;</li>
+    <li>Membros do conselho de administração de entidade administrativa independente;</li>
+    <li>Titulares de cargos de direção superior do 1.º grau e do 2.º grau, e equiparados, e dirigentes máximos dos serviços das câmaras municipais e dos serviços municipalizados;</li>
+    <li>Chefes de gabinete dos membros dos governos da República e regionais;</li>
+    <li>Representantes ou consultores mandatados pelos governos da República e regionais em processos de concessão ou alienação de ativos públicos;</li>
+    <li>Juízes do Tribunal Constitucional e do Tribunal de Contas, Procurador-Geral da República e Provedor de Justiça;</li>
+    <li>Membros do Conselho Superior da Magistratura, do Conselho Superior dos Tribunais Administrativos e Fiscais e do Conselho Superior do Ministério Público;</li>
+    <li>Magistrados judiciais e os Magistrados do Ministério Público.</li>
+  </ul>
+
+</div>
